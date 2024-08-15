@@ -1,0 +1,135 @@
+/* CSS/Skills.css */
+
+@font-face {
+  font-family: Mabry;
+  src: url('src/Fonts/MabryPro-Light.ttf');
+}
+
+.myservices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95vw;
+  flex-wrap: wrap;
+  margin-top: 5vw;
+  padding-left: 5vw;
+  
+text-align: right;
+  
+  gap: 0;
+}
+.line p i{
+  transform: rotate(-45deg);
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.line p {
+  
+ 
+  font-family: Mabry;
+  color: white;
+  margin: 0;
+}
+.line1 p{
+  color: rgb(255, 255, 255);
+}
+.word {
+  margin: 0;
+  font-family: Mabry;
+}
+
+.word span {
+  font-family: Mabry;
+  font-style: normal;
+  display: inline-block; /* Ensure transforms work correctly */
+}
+
+.word:hover {
+  color: yellow;
+}
+.line p i{
+  -webkit-text-stroke: 3px black;
+}
+.fancy {
+  display: flex; /* Ensures children (spans) can be targeted correctly */
+}
+
+.fancy .letter {
+  font-family: Mabry;
+  
+}
+.fancy>.letter{
+  display: inline-block;
+  transition: transform 350ms ease;
+}
+.fancy:hover .letter{
+  transition-duration: 800ms;
+  font-weight: bold;
+}
+
+.fancy:hover > .letter:nth-child(1){
+  transform: translate(-20%,40%) rotate(-15deg);
+}
+.fancy:hover > .letter:nth-child(2){
+  transform: translate(0%,-18%) rotate(-8deg);
+}
+.fancy:hover > .letter:nth-child(3){
+  transform: translate(0%,20%) rotate(16deg);
+}
+.fancy:hover > .letter:nth-child(4){
+  transform: translate(-10%,-35%) rotate(-9eg);
+}
+.fancy:hover > .letter:nth-child(5){
+  transform: translate(10%,40%) rotate(11deg);
+}
+.fancy:hover > .letter:nth-child(-50){
+  transform: translate(0%,-8%) rotate(-15deg);
+}
+.fancy:hover > .letter:nth-child(7){
+  transform: translate(-15%,30%) rotate(19deg);
+}
+.fancy:hover > .letter:nth-child(8){
+  transform: translate(5%,8%) rotate(-12deg);
+}
+.fancy:hover > .letter:nth-child(9){
+  transform: translate(40%,-25%) rotate(6deg);
+}
+.fancy:hover > .letter:nth-child(10){
+  transform: translate(50%,10%) rotate(10deg);
+}
+.fancy:hover > .letter:nth-child(11){
+  transform: translate(60%,-30%) rotate(5deg);
+}
+
+.line p{
+  font-size: 3em;
+}
+@media (max-width:640px) {
+  .line p{
+      font-size: 6vw;
+  }
+  .line{
+    width: 80%;
+  }
+  .myservices{
+    margin:5vh 0;
+  }
+  .line p i{
+    -webkit-text-stroke: 0.8px black;
+  }
+  
+}
+@media (min-width: 640px) and (max-width: 1000px) {
+  .line p {
+    font-size: 2em;
+  }
+  .line {
+    width: 45%;
+  }
+}

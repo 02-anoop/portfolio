@@ -1,0 +1,156 @@
+.apheading{
+    color: white;
+    margin-left: 5vw;
+    font-size: 5rem;
+    font-weight: lighter;
+}
+.apheading h4{
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+}
+.proname{
+  
+    margin-bottom: 5vh;
+}
+
+.allpro{
+    display: flex;
+    max-width: 95vw;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    margin: 5vw;
+    font-family: "Montserrat", sans-serif;
+}
+
+.protab{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    margin-left: 25vw;
+    padding: 1vh;
+    border-radius: 40px;
+    margin-top:5vh;
+    justify-content: space-evenly;
+}
+.protab button{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    transition: text-decoration 1s;
+    font-family: "Montserrat", sans-serif;
+    font-weight: light;
+    width: auto;
+}
+
+.protab button:hover{
+    text-decoration: underline;
+}
+.active{
+    color: yellow;
+}
+.projectinfo{
+   
+    
+    margin-top: 2vh;
+   opacity: 0;
+   transition: all 1s;
+   display: flex;
+   justify-content: space-between;
+}
+.projectbox{
+    color: white;
+    margin: 5vh 0;
+    transition: all 0.5s;
+    width: 40vw;
+    height: fit-content;
+    overflow: hidden;
+    padding-bottom: 5vh;
+}
+.prolink{
+    color: black;
+    text-decoration: none;
+    padding: 1em;
+    background-color: white;
+    border-radius: 40px;
+    text-align: center;
+    align-self: center;
+}
+.prolink i{
+    transform: rotate(-45deg);
+}
+.prolink:hover{
+    color: grey;
+}
+.proimg{
+    min-width: 40vw;
+    max-width: 40vw;
+    max-height: 47vh;
+    min-height: 47vh;
+    margin-bottom: 5vh;
+}
+.projectbox:hover .projectinfo{
+    opacity: 1; 
+}
+.projectbox:hover{
+    transform: translateY(-2vh);
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.projectbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+@media (max-width:1000px) {
+    .allpro{
+        justify-content: center;
+        
+    }
+    .projectbox{
+        width: 60vw;
+    }
+    .proimg{
+        min-width: 60vw;
+        max-width: 60vw;
+        max-height: 50vh;
+        min-height: 50vh;
+    }
+    .apheading{
+        font-size: 4em;
+    }
+}
+@media (max-width:640px) {
+    .apheading{
+        font-size: 9vw;
+    }
+    .proimg{
+        min-width: 80vw;
+        max-width: 80vw;
+        max-height: 30vh;
+        min-height: 30vh;
+    }
+    .projectbox{
+        margin: 0 0;
+    }
+   
+    .prolink{
+        padding: 0.5em;
+        font-size: 0.75em;
+        height: 3vh;
+        min-width: 9em;
+     
+    }
+    .proname{
+        font-size: 0.75em;
+    }
+}

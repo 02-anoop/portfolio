@@ -1,0 +1,97 @@
+
+
+:root {
+	--cards: 4;
+	--cardHeight: 87vh;
+	--cardTopPadding: 1.5em;
+	--cardMargin: 4vw;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	background-color: black;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	
+}
+
+
+
+#card1 .card {
+	
+	background: black;
+	
+	
+}
+
+#card2 .card{
+	background-color: black;
+	
+}
+#card3 .card-body {
+	background-color: black;
+}
+#card4 .card-body {
+	background-color: black;
+}
+#card5 .card-body {
+	background-color: black;
+}
+
+.card-body {
+	
+	
+	
+	height: 70vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transition: all 0.5s;
+	width: 100%;
+	height: 50vh;
+	background-color:black;
+	
+}
+
+h2 {
+	font-size: 2.5em;
+}
+.projectimg{
+	width: 80%;
+	height: 80%;
+	border-radius: 50px;
+	border: 4px solid white;
+	
+}
+.card:nth-child(even) .card-body {
+    flex-direction: row-reverse; /* Image on the right for even cards */
+}
+
+.card:nth-child(odd) .card-body {
+    flex-direction: row; /* Image on the left for odd cards */
+}
+#cards{
+	
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+
+}
+.pro{
+	background-color: transparent;
+	margin-left: 10vh;
+}
+.projectname{
+	background-color: transparent;
+}
+.projecttext{
+	background-color: transparent;
+}

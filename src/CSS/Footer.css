@@ -1,0 +1,31 @@
+.footer p{
+  font-size: 2vw;
+  color: white;
+  font-family: Mabry;
+  text-align: right;
+  margin-right:5vw ;
+}
+.last{
+  display: flex;
+  margin-top: 15vh;
+  justify-content: center;
+  gap: 2vw;
+  font-size: 5vw;
+  height: 10vh;
+}
+.last p{
+  font-size: 1rem;
+}
+@media (max-width:550px) {
+  .footer p{
+    font-size: 3.5vw;
+  }
+  .last {
+    margin-top: 10vh;
+  }
+  .last p{
+    
+    font-size: 3.5vw;
+    
+  }
+}

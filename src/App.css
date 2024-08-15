@@ -1,0 +1,36 @@
+#root{
+    font-family: "Bebas Neue", sans-serif;
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+  }
+  html{
+    
+    padding: 0;
+    background-color: white;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    height: auto;
+   
+  }
+  body{
+    background-color: black;
+    width: 100vw;
+  }
+  body {
+    font-size: 16px; 
+  }
+  
+ 
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  

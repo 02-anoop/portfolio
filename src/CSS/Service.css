@@ -1,0 +1,250 @@
+.servicemain{
+    width: 70%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin-left: 30vw ;
+
+    display: grid;
+    grid-template-rows: 20% 17% 17% 30% 10% 20% 30%;
+    grid-template-columns: 20% 12% 8% 10% 25% 15%;
+    grid-gap: 1%;
+    
+}
+.service1{
+    
+    background-image: url('src/Images/1000_F_544426493_RoOGKTykrRCbvmvRFvatO9DR3We7R16Y.jpg');
+    background-size: cover;
+    
+}
+.service2{
+    background-color:aqua;
+    background-image: url('src/Images/mark.jpg');
+    background-size: cover;
+    grid-column: 2/4;
+    grid-row: 1/3;
+    
+}
+.service3{
+    background-color:lavender;
+    background-image: url('src/Images/green.jpeg');
+    background-size: cover;
+    grid-row: 1/3;
+    grid-column: 4/6;
+}
+.service4{
+    background-color:brown;
+    background-image: url('src/Images/sfdf.png');
+    background-size: cover;
+}
+.service5{
+    background-color:blue;
+    background-image: url('src/Images/Screenshot 2024-07-21 141203.png');
+    background-size: cover;
+    
+    grid-row: 2/4;
+    
+}
+.service6{
+    background-color: yellow;
+    background-size: cover;
+    background-image: url('src/Images/1000_F_531835862_cM7cQ7S7eJrgoZDWLAjsTQQ6UtRo5eja.jpg');
+}
+.service7{
+    background-color: yellowgreen;
+  
+    background-image: url('src/Images/sign.png');
+    background-size:cover;
+    
+}
+.service8{
+    
+    background-image: url('src/Images/random.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column: 3/5;
+}
+.service9{
+    background-color: pink;
+    background-image: url('src/Images/ba2e5038b06daf5d0027bbea60a5bde2650d6b0f_1280.png');
+    background-size: cover;
+    grid-row: 3/5;
+    grid-column: 5/7;
+   
+}
+.service10{
+    background-color: goldenrod;
+    background-image: url('src/Images/Screen Shot 2023-06-15 at 04-04-44.png');
+    grid-column: 1/3;
+    
+   
+    
+}
+.service11{
+    background-color: peachpuff;
+    background-image: url('src/Images/bs.png');
+    background-size: cover;
+    grid-column: 3/5;
+}
+.serv{
+    border-radius: 10px;
+    opacity: 1;
+}
+.skillname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+}
+.skillname:hover {
+    opacity: 1;
+   font-family: Mabry;
+   font-weight: 600;
+   color: white;
+   
+    backdrop-filter: blur(5px);
+
+}
+.servehead{
+    font-size: 5rem;
+    margin-bottom: 5vh;
+    gap:1vh;
+    color: white;
+    margin-top: 5vw;
+    font-family:Mabry ;
+    text-transform: capitalize;
+    margin-left: 5vw;
+}
+.servehead span{
+    font-size: 1rem;
+    margin-top: 3.75rem;
+}
+@media (min-width:640px) and (max-width: 1000px) {
+    .servehead{
+        font-size: 4rem;
+    }
+    .servehead span{
+        font-size: 1rem;
+    }
+    .servicemain {
+        width: 95vw;
+        margin-left: 5vw;
+        height: 200vh;
+        grid-template-rows: 10% 15% 10% 5% 20% 2% 20% 10% 20%;
+        grid-template-columns: 22% 18% 12% 29%; /* Adjusted for smaller screens with up to 4 columns */
+    }
+    
+    /* Adjusted column span for service2 */
+    .service2 {
+        grid-column: 2 / 4; /* Adjusted for smaller screens */
+        grid-row: 1 / 3;
+    }
+    
+    /* Adjusted column span for service3 */
+    .service3 {
+        grid-column: 1 / 4; /* Adjusted for smaller screens */
+        grid-row: 3 / 5;
+    }
+    
+    /* Adjusted column span for service5 */
+    .service5 {
+        grid-row: 3 / 5; /* Adjusted for smaller screens */
+    }
+    
+    /* Adjusted column span for service7 */
+    .service7 {
+        grid-row: 6 / 8;
+        grid-column: 3 / 5; /* Adjusted for smaller screens */
+    }
+    
+    /* Adjusted column span for service8 */
+    .service8 {
+        grid-row: 5 / 7; 
+        grid-column: 1/3; /* Adjusted for smaller screens */
+        background-size: cover;
+    }
+    
+    /* Adjusted column span for service9 */
+    .service9 {
+        grid-row: 5 / 6; /* Adjusted for smaller screens */
+        grid-column: 3 / 5; /* Adjusted for smaller screens */
+    }
+    
+    /* Adjusted column span for service10 */
+    .service10 {
+        grid-column: 1 / 5; 
+        grid-row: 8/9;/* Adjusted for smaller screens */
+    }
+    
+    /* Adjusted column span for service11 */
+    .service11 {
+        grid-column: 1 / 3;
+        grid-row: 7/8; /* Adjusted for smaller screens */
+    }
+}
+@media (max-width:640px){
+    .servehead{
+        font-size: 9vw;
+        
+    }
+    .servehead span{
+        font-size: 1rem;
+    }
+    .servicemain {
+        width: 95vw;
+        margin-left: 5vw;
+        height: 200vh;
+        grid-template-rows: 10% 12% 9% 7% 13% 6% 15% 10% ;
+        grid-template-columns: 24% 20% 15% 31%; /* Adjusted for smaller screens with up to 4 columns */
+    }
+    
+    /* Adjusted column span for service2 */
+    .service2 {
+        grid-column: 2 / 4; /* Adjusted for smaller screens */
+        grid-row: 1 / 3;
+    }
+    
+    /* Adjusted column span for service3 */
+    .service3 {
+        grid-column: 1 / 4; /* Adjusted for smaller screens */
+        grid-row: 3 / 5;
+    }
+    
+    /* Adjusted column span for service5 */
+    .service5 {
+        grid-row: 3 / 5; /* Adjusted for smaller screens */
+    }
+    
+    /* Adjusted column span for service7 */
+    .service7 {
+        grid-row: 6 / 8;
+        grid-column: 3 / 5; /* Adjusted for smaller screens */
+    }
+    
+    /* Adjusted column span for service8 */
+    .service8 {
+        grid-row: 5 / 7; 
+        grid-column: 1/3; /* Adjusted for smaller screens */
+        background-size: cover;
+    }
+    
+    /* Adjusted column span for service9 */
+    .service9 {
+        grid-row: 5 / 6; /* Adjusted for smaller screens */
+        grid-column: 3 / 5; /* Adjusted for smaller screens */
+    }
+    
+    /* Adjusted column span for service10 */
+    .service10 {
+        grid-column: 1 / 5; 
+        grid-row: 8/9;/* Adjusted for smaller screens */
+    }
+    
+    /* Adjusted column span for service11 */
+    .service11 {
+        grid-column: 1 / 3;
+        grid-row: 7/8; /* Adjusted for smaller screens */
+    }
+}

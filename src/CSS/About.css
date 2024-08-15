@@ -1,0 +1,156 @@
+.about{
+  margin: 0 5vw;
+}
+.ylw{
+  color: white;
+  
+  display: flex;
+  flex-direction: column;
+}
+.yellow1{
+  border-radius:40px ;
+width: 15vw;
+height: auto;
+  margin: 0.8vw; 
+}
+.yellow2{
+  border-radius:40px ;
+  width:20vw;
+  height: auto;
+  margin: 0.8vw; 
+}
+.flx{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.h1first{
+  margin-top: 0.5em;
+}
+.yellow1{
+  background-image: url('src/Images/yellow4.jpg');
+  background-size: cover;
+  background-color: yellow;
+  width: 8rem;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+.yellow2{
+  background-image: url('src/Images/yellow3.jpg');
+  background-size: cover;
+  width: 15rem;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+.end{
+  margin-left:5vw ;
+  color: white;
+}
+
+.greetings{
+  font-size: 1em;
+}
+@media (min-width:640px )and(max-width:1000px) {
+  .greetings{
+      font-size: 0.8em;
+  }
+  .yellow1{
+      border-radius:40px ;
+      width: 10vw;
+      margin: 2vw; 
+  }
+  .yellow2{
+      border-radius:40px ;
+      width:20vw;
+      margin: 2vw; 
+  }
+}
+@media (max-width:640px) {
+  .greetings{
+      font-size: 0.6em;
+  }
+  .yellow1{
+      border-radius:40px ;
+      width: 15vw;
+      margin:2vw; 
+  }
+  .yellow2{
+      border-radius:40px ;
+      width:20vw;
+      margin: 2vw; 
+  }
+}
+
+
+
+.ab{
+  font-size: 5em;
+}
+@media (min-width:640px )and(max-width:1000px) {
+  .ab{
+      font-size: 4em;
+  }
+}
+@media (max-width:640px) {
+  .ab{
+      font-size: 9vw;
+  }
+}
+.ylw{
+  font-size: 5em;
+  font-weight: lighter;
+}
+@media (min-width:640px )and(max-width:1000px) {
+  .ylw{
+      font-size: 4em;
+  }
+}
+@media (max-width:640px) {
+  .ylw{
+      font-size: 9vw;
+  }
+}
+.descrip{
+  font-size: 1.2em;
+  text-align: justify;
+  margin-top: 3em;
+  padding-left: 40vw;
+  line-height: 1.7em;
+  color: white;
+  font-family:  Mabry;
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .descrip {
+      font-size: 0.8em;
+      text-align: left;
+      padding-left: 20vw;
+  }
+}
+
+@media (max-width:640px) {
+  .descrip{
+      font-size: 0.6em;
+      text-align: left;
+      padding-left: 0;
+  }
+}
+.abthr{
+  margin-top: 1em;
+}
+.end p{
+  font-size: 3em;
+  margin-top: 1.5em;
+  font-family:  Mabry;
+}
+@media (min-width:640px )and(max-width:1000px) {
+  .end p{
+      font-size:2em;
+  }
+}
+@media (max-width:640px) {
+  .end p{
+      font-size: 7vw;
+  }
+}

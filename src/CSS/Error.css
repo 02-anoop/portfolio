@@ -1,0 +1,72 @@
+.error{
+
+background-color: black;
+width: 100vw;
+height: 120vh;
+  
+
+}
+.errorno{
+    color: white;
+    font-size: 50vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+   
+   
+   margin-left: -20vw;
+   font-weight: 700;
+   
+   color: rgb(44, 44, 44);
+   overflow: hidden;
+
+}
+.errormsg{
+    color: white;
+    font-size: 3.75vw;
+    font-family: Mabry;
+    position: absolute;
+    right: 2vw;
+    bottom: 10vw;
+    text-align: right;
+}
+.homebtn{
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: none;
+    padding: 2vw;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: fixed;
+    top: 2vw;
+    left: 2vw;
+}
+.homebtn:hover{
+    color: yellow;
+}
+
+.err{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    
+}
+@media (max-width:1000px) {
+    .error{
+        margin-left: 10vw;
+    }
+    .errormsg{
+        bottom: 30vh;
+        font-size: 4vw;
+    }
+    .homebtn{
+        font-size: 1rem;
+    }
+}
+@media (max-width:600px) {
+    .errormsg{
+        bottom: 45vh;
+        font-size: 4vw;
+    }
+
+}
