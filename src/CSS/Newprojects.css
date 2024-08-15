@@ -193,7 +193,7 @@
     overflow: hidden;
     background-size: cover; /* Ensure the background covers the container */
     background-position: center; /* Center the background image */
-    background-color: orange;
+  
     margin-bottom: 2vh;
     height: 50vh; /* Adjust height as needed */
 }

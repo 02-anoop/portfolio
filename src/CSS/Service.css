@@ -17,7 +17,7 @@
     
 }
 .service2{
-    background-color:aqua;
+    
     background-image: url('src/Images/mark.jpg');
     background-size: cover;
     grid-column: 2/4;
@@ -25,19 +25,19 @@
     
 }
 .service3{
-    background-color:lavender;
+    
     background-image: url('src/Images/green.jpeg');
     background-size: cover;
     grid-row: 1/3;
     grid-column: 4/6;
 }
 .service4{
-    background-color:brown;
+    
     background-image: url('src/Images/sfdf.png');
     background-size: cover;
 }
 .service5{
-    background-color:blue;
+    
     background-image: url('src/Images/Screenshot 2024-07-21 141203.png');
     background-size: cover;
     
@@ -45,12 +45,12 @@
     
 }
 .service6{
-    background-color: yellow;
+  
     background-size: cover;
     background-image: url('src/Images/1000_F_531835862_cM7cQ7S7eJrgoZDWLAjsTQQ6UtRo5eja.jpg');
 }
 .service7{
-    background-color: yellowgreen;
+    
   
     background-image: url('src/Images/sign.png');
     background-size:cover;
@@ -64,7 +64,7 @@
     grid-column: 3/5;
 }
 .service9{
-    background-color: pink;
+    
     background-image: url('src/Images/ba2e5038b06daf5d0027bbea60a5bde2650d6b0f_1280.png');
     background-size: cover;
     grid-row: 3/5;
@@ -72,7 +72,7 @@
    
 }
 .service10{
-    background-color: goldenrod;
+   
     background-image: url('src/Images/Screen Shot 2023-06-15 at 04-04-44.png');
     grid-column: 1/3;
     
@@ -80,7 +80,7 @@
     
 }
 .service11{
-    background-color: peachpuff;
+   
     background-image: url('src/Images/bs.png');
     background-size: cover;
     grid-column: 3/5;
