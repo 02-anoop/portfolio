@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import './CSS/About.css';
 import JSConfetti from "js-confetti";
+import Nav from './Nav';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import { animateAboutSection } from './animation'; // Import the animation function
 
 const About = () => {
@@ -24,7 +27,7 @@ const About = () => {
           <p className="greetings">GREETINGS</p>
           <div className="h1first ylw">
             <div >HELLO </div>
-            <div className="flx">I'M <div className="yellow1"></div> ARVIND &</div>
+            <div className="flx">I'M <div className="yellow1"></div> ANOOP &</div>
             <div className="flx" >I DESIGN<div className="yellow2"></div>  STUFF</div>
             
           </div>

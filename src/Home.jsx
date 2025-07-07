@@ -12,6 +12,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
 import Preloader from './Preloader';
+import Cursor from './Cursor';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Nav />
       
       <Landing />
+     
       
       <Newprojects />
       <About />

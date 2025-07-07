@@ -3,222 +3,161 @@
   src: url('src/Fonts/MabryPro-Light.ttf');
 }
 
-.active{
-  color: yellow;
+.landing {
+  background-color: black;
+  font-family: Mabry;
+  margin: 0 5vw;
+  position: relative;
 }
 
-.landing{
-    
-    background-color: black;
-    font-family: Mabry;
-    margin: 0 5vw;
-    
-}
-.profile{
-    
-    width: 50vw;
-    height: 20vh;
-    color: wheat;
-}
-.profilepic{display: flex;
-margin-bottom: 1vw;}
-.pic
-    {color: white;
-      background-image: url('src/Images/profile.jpg');
-      background-size: cover;
-        width: 5vw;
-        height: 5vw;
-        border-radius: 50%;
-    
-}
-.profilemessage{
-    color: white;
-    align-self: center;
-    margin-left: 1vw;
-    
-    font-family: "Montserrat", sans-serif;
-}
-.pic:hover .profilemessage {
-    background-color: grey;
-    border-radius: 10px;
-    padding: 2px 10px;
-}
-
-.available{
-    border: 2px solid grey;
-    color: white;
-    width: 20vw;
-    height: auto;
-    padding: 0.5vw 1vw;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-family: "Montserrat", sans-serif;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-}
-.available .green{
-  width:  6vh;
-  padding: 1vh;
-  height: 1vh;
+.content-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vh 0;
+}
+
+.text-section {
+  flex: 1 1 50%;
+  padding-right: 2vw;
+}
+
+.profile-section {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
-.greencircle{
-    height: 1vw;
-    width: 1vw;
-    background-color: green;
-    border-radius: 50%;
-    margin-right: 1vw;
-    animation: grow 3s 0s infinite ease-in;
-    
-}
-.menu-items{
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    cursor: pointer;
-    width: 40%;
 
-    
+.crafting {
+  color: white;
+  font-size: 3em;
+  font-weight: 550;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
-.menu-items li {
-    text-decoration: none;
-}
-@keyframes grow {
-    0%{
-        opacity: 0.6;
-        transform: scale(0.4);
-    }
-    40%{
-        opacity: 1;
-        transform: scale(0.8);
-        border: 2px solid white;
-    }
-    100%{
-        opacity: 0.6;
-        transform: scale(0.4);
-    }
 
+.code {
+  font-family: "Courier", monospace;
+  font-size: 1.6em;
+  color: white;
+  /* margin-top: 5vh; */
 }
-.landing h1{
-    color: white;
-    font-size: 4.75em; 
-    font-weight: 100;
-    width: 75vw;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5vh 0 0 0 ;
-    text-transform: uppercase;
-    font-weight: 550;
+
+.gosh {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  margin-top: 5vh;
+  margin-bottom: 8vh;
   
-
 }
-h1 span{
+
+h1 span, .gosh span {
   font-style: italic;
-  margin-left: 3px;
 }
-#developing{
-    width: fit-content;
-}
-#developing:hover{
-    color: rgb(255, 87, 87);
-}
-.gosh{
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.2rem;
-   margin-top: 2vh;
 
+.profilepic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
 }
-.gosh span{
-    font-style: italic;
-    font-family: Mabry;
+
+.pic {
+  background-image: url('src/Images/image.png');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1vh;
+}
+
+.available {
+  border: 2px solid grey;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.green {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.greencircle {
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  animation: grow 3s infinite ease-in;
+}
+
+@keyframes grow {
+  0% { opacity: 0.6; transform: scale(0.4); }
+  40% { opacity: 1; transform: scale(0.8); border: 2px solid white; }
+  100% { opacity: 0.6; transform: scale(0.4); }
 }
 
 .landingcursor {
   position: absolute;
-  left: 50vw;
-  top: 50vh;
-  pointer-events: none; /* Ensure the cursor does not interfere with mouse events */
-  width: 25px; /* Adjust size as needed */
-  height: 25px; /* Adjust size as needed */
-  background-color: yellow; /* Example background color */
-  border-radius: 50%; /* Example rounded shape */
-  z-index: 1000; /* Ensure it's above other content */
-  transition: transform 0.3s ease-out; /* Optional: add a transition effect */
+  pointer-events: none;
+  width: 25px;
+  height: 25px;
+  background-color: yellow;
+  border-radius: 50%;
+  z-index: 1000;
   mix-blend-mode: difference;
 }
 
-.landing h1:hover ~ .landingcursor {
-  transform: scale(5);
-  transform-origin: center;
-}
 
-.first {
-  display: flex;
-  flex-direction: column;
-}
-.landing p{
-  width: 35vw;
-  font-size: 1.75em;
-}
-.hrlanding{
+.hrlanding {
   margin-top: 5vh;
+  border: 0.5px solid white;
+  width: 100%;
 }
-@media (max-width :640px) {
-  .landing h1{
-    font-size: 9vw;
-    width: 90vw;
 
-  }
-  .navbar{
-    font-size: 1.2em;
-  }
-  .landing p{
-    width: 80vw;
-    font-size: 1em;
-  }
-  .profilepic .pic{
-    width: 8vw;
-    height: 8vw;
-  }
-  .available{
-    width: fit-content;
-    padding-right: 2vh;
-    margin-top: 2vh;
-    font-size: 0.6em;
-    
-  }
-  .available .green{
-    width: 4vw;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
-}
-@media (min-width :640px)and ( max-width :1000px) {
-  .landing h1{
-    font-size: 4rem;
-    width: 90vw;
+  /* Fix: make profile pic go above text */
+  .profile-section {
+    order: -1; /* Move the profile picture above the text on mobile */
+    flex: 1 1 100%;
+    padding: 0;
+  }
 
+  .text-section {
+    flex: 1 1 100%;
+    padding: 0;
   }
-  .navbar{
-    font-size: 1.5em;
+
+  .crafting {
+    font-size: 2em;
   }
-  .profilepic .pic{
-    width: 8vw;
-    height: 8vw;
+
+  .gosh {
+    font-size: 1.2rem;
   }
-  .landing p{
-    width: 60vw;
-    font-size: 1.5em;
-    
+
+  .pic {
+    width: 120px;
+    height: 120px;
   }
-  .available{
-    width: fit-content;
-    padding-right: 2vh;
-    margin-top: 2vh;
-    font-size: 0.8em;
+
+  .available {
+    font-size: 0.9rem;
   }
 }

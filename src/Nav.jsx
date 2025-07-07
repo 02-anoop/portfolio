@@ -1,34 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './CSS/Nav.css'
-import './App.css'
-
+import './CSS/Nav.css';  // Your navbar CSS
+import './App.css';  // Additional styles if needed
 
 const Nav = () => {
-  const [menuVisible, setMenuVisible] = useState(false);
-
-  function toggleMenu() {
-    setMenuVisible(!menuVisible);
-  }
-
   return (
-    <>
-      <div className="navbar" onClick={toggleMenu}>
-        {menuVisible ? (
-          <ul className="menu-items">
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><a href=".about">About</a></li>
-            <li><NavLink to="/projects">Projects</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
-            <li><NavLink to="/services">Services</NavLink></li>
-          </ul>
-        ) : (
-          <span>MENU</span>
-        )}
-      </div>
-      
-    </>
+    <nav className="navbar">
+      <ul className="nav-links">
+        <li>
+          <NavLink to="/" className="nav-item">
+            HOME
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/projects" className="nav-item">
+            PROJECTS
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" className="nav-item">
+            ABOUT
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className="nav-item">
+            CONTACT
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
-}
+};
 
 export default Nav;

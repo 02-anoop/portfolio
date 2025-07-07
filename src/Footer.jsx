@@ -10,14 +10,14 @@ const Footer = () => {
     <>
       <div className="footer">
         <hr />
-        <p>arvindpuri1492@gmail.com</p>
+        <p>anoopsaini.0905@gmail.com</p>
         <hr />
         <p>Sikar, Rajasthan</p>
         <hr />
         <p>Willing to work for a pizza (and a paycheck)</p>
         <hr />
         <div className="last">
-        <p>©️ARVINDSAURA 2024  . Made with Love</p>
+        <p>©️ANOOPSAINI 2025  . Made with Love</p>
        
       </div>
       </div>

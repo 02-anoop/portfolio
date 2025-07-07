@@ -91,7 +91,7 @@ const Contact = () => {
         <div className="contactpage">
           <h1 className="contactline">Designing with unwavering dedication, pouring <span className="heart"  onMouseEnter={handleHover2}>heart </span> and soul into every pixel</h1>
 
-          <form action="https://formspree.io/f/mqazeynk" method="POST">
+          <form action="https://formspree.io/f/xqaqpoyb" method="POST">
             <div className="contact1">
               <div className="Name">
                 <hr />
@@ -147,7 +147,7 @@ const Contact = () => {
           <div className="directmail">
             <div className="mailleft">
               <h1 className="bless">Bless me with your expert <span className="nazar"  onMouseEnter={handleHover3}>nazar  </span> of insights</h1>
-              <form action="https://formspree.io/f/myzgknak" method="POST">
+              <form action="https://formspree.io/f/xqaqpoyb" method="POST">
                 <div className="maildiv">
                   <input type="email" placeholder="Email" name="Email" autoComplete="off"></input>
                   <div className="feed">
