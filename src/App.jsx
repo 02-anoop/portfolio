@@ -9,8 +9,10 @@ import Cursor from './Cursor'; // Import your custom cursor component
 
 function App() {
   return (
+    <>
+    <Cursor /> {/* Cursor will stay on top of all routes */}
     <BrowserRouter>
-      <Cursor /> {/* Cursor will stay on top of all routes */}
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Allprojects />} />
@@ -19,6 +21,7 @@ function App() {
         <Route path="*" element={<Errorpage />} />
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 

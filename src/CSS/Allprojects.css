@@ -1,11 +1,11 @@
 .apheading{
     color: white;
     margin-left: 5vw;
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
     font-weight: lighter;
 }
 .apheading h4{
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 2rem);
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
 }
@@ -26,17 +26,13 @@
 
 .protab{
     display: flex;
-    justify-content: center;
-    width: 50vw;
+    justify-content: space-evenly;
+    width: min(50vw, 500px);
     font-family: "Montserrat", sans-serif;
     background-color: white;
-    justify-self: center;
-    align-self: center;
-    margin-left: 25vw;
+    margin: 5vh auto 0;
     padding: 1vh;
     border-radius: 40px;
-    margin-top:5vh;
-    justify-content: space-evenly;
 }
 .protab button{
     background-color: white;
@@ -125,22 +121,20 @@
         max-height: 50vh;
         min-height: 50vh;
     }
-    .apheading{
-        font-size: 4em;
+    .protab {
+        width: min(70vw, 400px);
     }
 }
 @media (max-width:640px) {
-    .apheading{
-        font-size: 9vw;
-    }
     .proimg{
-        min-width: 80vw;
-        max-width: 80vw;
-        max-height: 30vh;
-        min-height: 30vh;
+        min-width: 85vw;
+        max-width: 85vw;
+        max-height: 25vh;
+        min-height: 25vh;
     }
     .projectbox{
         margin: 0 0;
+        width: 85vw;
     }
    
     .prolink{
@@ -152,5 +146,12 @@
     }
     .proname{
         font-size: 0.75em;
+    }
+    .protab {
+        width: 90vw;
+        padding: 0.8vh;
+    }
+    .protab button {
+        font-size: 0.75rem;
     }
 }

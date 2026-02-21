@@ -3,18 +3,28 @@ import { preLoaderAnim } from './animation';
 import './CSS/preloader.css'
 
 const Preloader = () => {
-useEffect(()=>{
+  useEffect(() => {
     preLoaderAnim()
-},[]);
+  }, []);
 
   return (
     <div className='preloader'>
-        <div className='texts-container'>
-            <span>Developer .</span>
-            <span>Curator .</span>
-           
-            <span> Freelancer</span>
+      <div className='preloader-content'>
+        <div className='tagline'>
+          <span>Developer</span>
+          <span className='dot'>•</span>
+          <span>Designer</span>
+          <span className='dot'>•</span>
+          <span>Creator</span>
         </div>
+        <div className='loader-wrapper'>
+          <div className='loader-bar'></div>
+        </div>
+        <div className='counter'>
+          <span className='count'>0</span>
+          <span className='percent'>%</span>
+        </div>
+      </div>
     </div>
   )
 }

@@ -108,7 +108,7 @@
 
 }
 .servehead{
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
     margin-bottom: 5vh;
     gap:1vh;
     color: white;
@@ -193,11 +193,11 @@
         font-size: 1rem;
     }
     .servicemain {
-        width: 95vw;
+        width: 90vw;
         margin-left: 5vw;
-        height: 200vh;
+        height: 150vh;
         grid-template-rows: 10% 12% 9% 7% 13% 6% 15% 10% ;
-        grid-template-columns: 24% 20% 15% 31%; /* Adjusted for smaller screens with up to 4 columns */
+        grid-template-columns: 24% 20% 15% 31%;
     }
     
     /* Adjusted column span for service2 */

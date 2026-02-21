@@ -46,29 +46,29 @@
 }
 
 .card-body {
-	
-	
-	
-	height: 70vh;
+	height: auto;
+	min-height: 40vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	transition: all 0.5s;
 	width: 100%;
-	height: 50vh;
 	background-color:black;
-	
+	gap: 2vw;
+	flex-wrap: wrap;
 }
 
 h2 {
-	font-size: 2.5em;
+	font-size: clamp(1.5em, 2.5vw, 2.5em);
 }
 .projectimg{
 	width: 80%;
-	height: 80%;
+	max-width: 500px;
+	height: auto;
+	min-height: 200px;
 	border-radius: 50px;
 	border: 4px solid white;
-	
+	object-fit: cover;
 }
 .card:nth-child(even) .card-body {
     flex-direction: row-reverse; /* Image on the right for even cards */

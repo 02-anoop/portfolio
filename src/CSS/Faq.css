@@ -2,8 +2,8 @@
 .main-div {
     background-color: black;
     color: white;
-   margin-bottom: 15vh;
-    
+    margin-bottom: 0;
+    padding: 0 2vw;
 }
 
 .main-div h1 {
@@ -19,36 +19,34 @@
     align-items: center;
     cursor: pointer;
     padding: 10px 0;
-   
+    gap: 2vw;
 }
 
 .main-heading p {
-    
-    font-size: 3vw;
+    font-size: clamp(1rem, 3vw, 3vw);
     user-select: none;
     color: white;
 }
 .faq-item{
-    max-width: 95vw;
+    max-width: 100%;
     overflow: hidden;
 }
 
 
 .main-heading h3 {
     color: white;
-
     text-align: right;
     font-family: Mabry;
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem);
 }
 
 .answer {
-    
     color: rgb(135, 135, 135);
     text-align: right;
     width: 70vw;
-    margin-left: 25vw;
-    font-size: 1.2em;
-    
+    margin-left: auto;
+    font-size: clamp(0.8rem, 1.2em, 1.4rem);
+    line-height: 1.6;
 }
 
 hr {
@@ -58,54 +56,52 @@ hr {
     margin: 5px 0;
 }
 .main-heading i {
-   
-    font-size:3em;
+    font-size: clamp(1.5em, 3vw, 3em);
     transition: transform 0.3s ease;
     color: white;
     transform: rotate(-45deg);
     transition: all 1s ease;
     -webkit-text-stroke: 4px black;
+    flex-shrink: 0;
 }
 
 
 
 .faqhead{
-    font-size: 5em;
+    font-size: clamp(2.5rem, 5vw, 5em);
 }
 .main-heading i{
     margin-left: 5vw;
 }
-@media (max-width:640px) {
-    .main-div{
-        margin-top: -10vh;
+
+@media (max-width: 600px) {
+    .main-div {
+        padding: 0 3vw;
     }
-    .faqhead{
-      font-size: 9vw;
-    }
-    .answer{
-      font-size: 5vw;
-      margin-left: 5vw;
-      width: 90vw;
-    }
-    .main-heading i{
+    .main-heading i {
         -webkit-text-stroke: 1px black;
-        font-size: 2em;
+        font-size: 1.5em;
+        margin-left: 2vw;
     }
-  }
-  @media (min-width: 640px) and (max-width: 1000px) {
-    .answer{
-      font-size: 1em;
+    .answer {
+        width: 90vw;
+        margin-left: 0;
+        font-size: 0.85rem;
     }
-    .faqhead {
-      font-size: 4em;
+    .main-heading h3 {
+        font-size: clamp(0.7rem, 3.5vw, 1rem);
     }
-    .main-heading i{
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .answer {
+        font-size: 1em;
+        width: 80vw;
+    }
+    .main-heading i {
         -webkit-text-stroke: 1px black;
-        
     }
-    .main-div{
+    .main-div {
         margin: 0;
     }
-  }
-  
-
+}

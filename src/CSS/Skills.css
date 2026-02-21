@@ -10,13 +10,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 95vw;
+  width: 100%;
   flex-wrap: wrap;
   margin-top: 5vw;
-  padding-left: 5vw;
-  
-text-align: right;
-  
+  padding: 0 5vw;
+  box-sizing: border-box;
+  text-align: right;
   gap: 0;
 }
 .line p i{
@@ -26,7 +25,10 @@ text-align: right;
 .line {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  align-items: baseline;
+  width: 55%;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .line p {
@@ -115,10 +117,12 @@ text-align: right;
       font-size: 6vw;
   }
   .line{
-    width: 80%;
+    width: 90%;
+    flex-wrap: nowrap;
   }
   .myservices{
-    margin:5vh 0;
+    margin: 5vh 0;
+    padding: 0 4vw;
   }
   .line p i{
     -webkit-text-stroke: 0.8px black;
@@ -130,6 +134,7 @@ text-align: right;
     font-size: 2em;
   }
   .line {
-    width: 45%;
+    width: 65%;
+    flex-wrap: nowrap;
   }
 }

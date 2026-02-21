@@ -1,86 +1,71 @@
-import React, { useEffect } from "react";
-import gsap from 'gsap';
-import './CSS/Skills.css';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import "./CSS/Skills.css";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const skillLines = [
+  { left: "MY", right: "SKILLS", hasIcon: true },
+  { left: "UI/UX", right: "DESIGN", fancy: "left" },
+  { left: "WEB", right: "DEVELOPMENT", fancy: "right" },
+  { left: "RESPONSIVE", right: "DESIGN", fancy: "left" },
+  { left: "CREATIVE", right: "SOLUTIONS", fancy: "right" },
+];
 
 const Skills = () => {
-    useEffect(() => {
-        gsap.utils.toArray(".line").forEach((element) => {
-            gsap.from(element, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: element,
-                    start: "bottom 80%", // Start animation when the bottom of the element reaches 80% from the top of the viewport
-                    end: "top 60%", // End animation when the top of the element reaches 60% from the top of the viewport
-                    scrub: 1, // Smooth scrubbing effect
-                    markers: false, // Set to true for debugging purposes
-                },
-            });
-        });
-    }, []); 
-    return (
-        <div className="myservices">
-            <div className="line line1">
-                <p>
-                    MY <i className="fa-solid fa-arrow-right-long"></i>
-                </p>
-                <p >
-                    SERVICES
-                </p>
-            </div>
-            <div className="line line2">
-                <p className="word fancy">
-                    <span className="letter">U</span>
-                    <span className="letter">I</span>
-                    <span className="letter">/</span>
-                    <span className="letter">U</span>
-                    <span className="letter">X</span>
-                </p>
-                <p >
-                    DESIGN
-                </p>
-            </div>
-            <div className="line line3">
-                <p >
-                    WEB
-                </p>
-                <p className="word fancy">
-                    <span className="letter">D</span>
-                    <span className="letter">E</span>
-                    <span className="letter">V</span>
-                    <span className="letter">E</span>
-                    <span className="letter">L</span>
-                    <span className="letter">O</span>
-                    <span className="letter">P</span>
-                    <span className="letter">M</span>
-                    <span className="letter">E</span>
-                    <span className="letter">N</span>
-                    <span className="letter">T</span>
-                </p>
-            </div>
-            <div className="line line4">
-                <p className="word fancy">
-                    <span className="letter">R</span>
-                    <span className="letter">E</span>
-                    <span className="letter">S</span>
-                    <span className="letter">P</span>
-                    <span className="letter">O</span>
-                    <span className="letter">N</span>
-                    <span className="letter">S</span>
-                    <span className="letter">I</span>
-                    <span className="letter">V</span>
-                    <span className="letter">E</span>
-                </p>
-                <p >
-                    DESIGN
-                </p>
+  const ref = useRef(null);
 
-            </div>
-            <hr/>
-        </div>
-    );
-}
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray(".sk-line").forEach((el, i) => {
+        gsap.from(el, {
+          opacity: 0,
+          y: 60,
+          duration: 0.7,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+          },
+          delay: i * 0.06,
+        });
+      });
+
+      gsap.from(".sk-hr", {
+        scaleX: 0,
+        transformOrigin: "left center",
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: { trigger: ".sk-hr", start: "top 92%" },
+      });
+    }, ref);
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <div className="sk-section" ref={ref}>
+      <div className="sk-lines">
+        {skillLines.map((line, i) => (
+          <div key={i} className={`sk-line${i === 0 ? " sk-line--header" : ""}`}>
+            <span className={`sk-word${line.fancy === "left" ? " sk-fancy" : ""}`}>
+              {line.hasIcon && <span className="sk-icon">{"\u2197"}</span>}
+              {line.left.split("").map((ch, ci) => (
+                <span key={ci} className="sk-letter">{ch}</span>
+              ))}
+            </span>
+            <span className="sk-dot" />
+            <span className={`sk-word${line.fancy === "right" ? " sk-fancy" : ""}`}>
+              {line.right.split("").map((ch, ci) => (
+                <span key={ci} className="sk-letter">{ch}</span>
+              ))}
+            </span>
+          </div>
+        ))}
+      </div>
+      <hr className="sk-hr" />
+    </div>
+  );
+};
 
 export default Skills;
