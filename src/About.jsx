@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useCallback, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { Helmet } from 'react-helmet-async';
 import "./CSS/About.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 /* ── DATA ── */
 const skills = [
-  "Java", "C++", "Python", "JavaScript", 
-  "React.js", "Node.js", "Tailwind CSS", "HTML/CSS", 
-  "SQL", "MongoDB", "Git", "GitHub", 
+  "Java", "C++", "Python", "JavaScript",
+  "React.js", "Node.js", "Tailwind CSS", "HTML/CSS",
+  "SQL", "MongoDB", "Git", "GitHub",
   "VS Code", "Cisco Packet Tracer", "AWS"
 ];
 
@@ -245,10 +246,10 @@ const terminalCommands = {
   date: [
     "📅 Current Date & Time:",
     "",
-    new Date().toLocaleString('en-US', { 
-      weekday: 'long', 
-      year: 'numeric', 
-      month: 'long', 
+    new Date().toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit',
@@ -278,7 +279,7 @@ const About = () => {
   const skillWordsRef = useRef([]);
   const terminalInputRef = useRef(null);
   const terminalBodyRef = useRef(null);
-  
+
   // Terminal State
   const [terminalHistory, setTerminalHistory] = useState([
     "Welcome to Anoop's Terminal! Type 'help' for commands.",
@@ -298,7 +299,7 @@ const About = () => {
   /* ── Execute Terminal Command ── */
   const executeCommand = (cmd) => {
     const trimmedCmd = cmd.trim().toLowerCase();
-    
+
     if (!trimmedCmd) return;
 
     // Add command to history
@@ -335,7 +336,7 @@ const About = () => {
 
     // Regular commands
     const output = terminalCommands[trimmedCmd];
-    
+
     if (output) {
       setTerminalHistory(prev => [...prev, ...output, " "]);
     } else {
@@ -356,7 +357,7 @@ const About = () => {
       executeCommand(currentInput);
       setCurrentInput("");
     }
-    
+
     // Arrow up - previous command
     else if (e.key === "ArrowUp") {
       e.preventDefault();
@@ -368,7 +369,7 @@ const About = () => {
         }
       }
     }
-    
+
     // Arrow down - next command
     else if (e.key === "ArrowDown") {
       e.preventDefault();
@@ -419,7 +420,7 @@ const About = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // 1. Initial Reveal
-      const tl = gsap.timeline({ scrollTrigger: { trigger: containerRef.current, start: "top 95%" }});
+      const tl = gsap.timeline({ scrollTrigger: { trigger: containerRef.current, start: "top 95%" } });
       tl.from(".ab-header-text span", { y: 50, opacity: 0, duration: 0.8, stagger: 0.05, ease: "power4.out", clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" })
         .from(".ab-bento-bio", { y: 30, opacity: 0, duration: 0.6, ease: "back.out(1.2)" }, "-=0.4")
         .from(".ab-terminal-box", { scale: 0.9, opacity: 0, duration: 0.6, ease: "back.out(1.5)" }, "-=0.2");
@@ -444,13 +445,21 @@ const About = () => {
 
   return (
     <section className="ab-wrapper" ref={containerRef} id="about">
-      
+      <Helmet>
+        <title>About Anoop Saini | Skills, Experience, & Journey</title>
+        <meta name="description" content="Learn more about Anoop Saini, a passionate Full Stack Developer from NIT Jalandhar. Experienced with MERN stack, competitive programming, and creating web experiences." />
+        <link rel="canonical" href="https://anoopsaini.netlify.app/about" />
+        <meta property="og:title" content="About Anoop Saini | Full Stack Developer" />
+        <meta property="og:description" content="Learn more about Anoop Saini, a passionate Full Stack Developer from NIT Jalandhar." />
+        <meta property="og:url" content="https://anoopsaini.netlify.app/about" />
+      </Helmet>
+
       {/* HEADER */}
       <div className="ab-header">
         <p className="ab-subtitle">/ ABOUT ME</p>
         <h2 className="ab-header-text">
           <span>Engineering</span> <span>ideas</span> <span>into</span>
-          <span className="ab-accent-1"> interactive</span> 
+          <span className="ab-accent-1"> interactive</span>
           <span className="ab-accent-2"> reality.</span>
         </h2>
       </div>
@@ -480,8 +489,8 @@ const About = () => {
               </div>
               <span className="ab-term-title">system_override.exe</span>
               <div className="ab-term-btns">
-                <button 
-                  className="ab-term-btn" 
+                <button
+                  className="ab-term-btn"
                   onClick={showCommands}
                   title="Show all available commands"
                 >
@@ -489,16 +498,16 @@ const About = () => {
                 </button>
               </div>
             </div>
-            <div 
+            <div
               ref={terminalBodyRef}
-              className="ab-terminal-body" 
+              className="ab-terminal-body"
               onClick={() => terminalInputRef.current?.focus()}
             >
               {/* Terminal History */}
               {terminalHistory.map((line, idx) => (
                 <p key={idx} className="ab-term-line">{line}</p>
               ))}
-              
+
               {/* Input Line */}
               <div className="ab-term-input-line">
                 <span className="ab-term-prompt">anoop@portfolio ~$</span>

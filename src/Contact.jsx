@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Helmet } from 'react-helmet-async';
 import './CSS/Contact.css';
 import JSConfetti from "js-confetti";
 
@@ -174,6 +175,15 @@ const Contact = () => {
 
   return (
     <div className="c" id="contact" ref={sectionRef}>
+      <Helmet>
+        <title>Contact Anoop Saini | Hire Me & Feedback</title>
+        <meta name="description" content="Get in touch with Anoop Saini for freelance, full-time, or collaboration opportunities in web development and software engineering." />
+        <link rel="canonical" href="https://anoopsaini.netlify.app/contact" />
+        <meta property="og:title" content="Contact Anoop Saini | Let's Build Something Together" />
+        <meta property="og:description" content="Reach out to Anoop Saini for your next web development project." />
+        <meta property="og:url" content="https://anoopsaini.netlify.app/contact" />
+      </Helmet>
+
       <div className="mouse-glow" ref={glowRef} />
 
       <div className="getintouch">
@@ -296,7 +306,7 @@ const Contact = () => {
             {'of insights'}
           </h1>
           <form action="https://formbold.com/s/3dqNb" method="POST">
-          
+
             <div className="maildiv">
               <input
                 type="email"

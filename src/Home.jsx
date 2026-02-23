@@ -78,13 +78,31 @@ const BottomStrip = () => {
   );
 };
 
+import { Helmet } from 'react-helmet-async';
+
 const Home = () => {
   return (
     <>
-      <Preloader/>
+      <Helmet>
+        <title>Anoop Saini | Full Stack Developer & Designer</title>
+        <meta name="description" content="Portfolio of Anoop Saini, a Full Stack Developer & Designer creating modern, interactive web experiences." />
+        <meta name="keywords" content="Anoop Saini, Portfolio, Web Developer, Full Stack Developer, Frontend Developer, React Developer, Web Design" />
+        <link rel="canonical" href="https://anoopsaini.netlify.app/" />
+
+        {/* Open Graph / Social Media Meta Tags */}
+        <meta property="og:title" content="Anoop Saini | Full Stack Developer & Designer" />
+        <meta property="og:description" content="Portfolio of Anoop Saini, a Full Stack Developer & Designer creating modern, interactive web experiences." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://anoopsaini.netlify.app/" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Anoop Saini | Full Stack Developer & Designer" />
+        <meta name="twitter:description" content="Portfolio of Anoop Saini, a Full Stack Developer & Designer creating modern, interactive web experiences." />
+      </Helmet>
+
+      <Preloader />
       <Nav />
-      
-      {/* Removed the extra <section> wrappers. The components handle themselves! */}
       <Landing />
       <About />
       <Newprojects />
