@@ -74,7 +74,7 @@ const terminalCommands = {
     "╚══════════════════════════════════════════╝",
     "",
     " Full-stack Developer & Problem Solver",
-    " Education: B.Tech IT @ NIT Jalandhar (3rd Year)",
+    " Education: B.Tech IT @ NIT Jalandhar (4th Year)",
     " Focus: Building elegant & robust solutions",
     " Coffee consumed: ∞"
   ],
@@ -135,7 +135,7 @@ const terminalCommands = {
     "",
     "National Institute of Technology, Jalandhar",
     "   B.Tech in Information Technology",
-    "   Year: 3rd (2023-2027)",
+    "   Year: 4th (2023-2027)",
     "   Focus: Full-stack Development & Software Engineering",
     "",
     "Relevant Coursework:",
@@ -472,7 +472,7 @@ const About = () => {
             <div className="ab-bio-inner">
               <h3>Hey, I'm <span className="ab-accent-1">Anoop</span> 👋</h3>
               <p>
-                A 3rd-year B.Tech IT student at <strong>NIT Jalandhar</strong>. I specialize in bridging the gap between elegant user interfaces and robust backend architectures.
+                A 4th-year B.Tech IT student at <strong>NIT Jalandhar</strong>. I specialize in bridging the gap between elegant user interfaces and robust backend architectures.
                 I enjoy turning complex problems into clean, efficient, and user-friendly solutions.
                 With a knack for debugging and a love for clean code, I spend my time bringing ideas to life. When I'm not debugging, I'm either gaming, geeking out over AI, or finding the best coffee.
               </p>

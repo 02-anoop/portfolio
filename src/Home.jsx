@@ -86,7 +86,7 @@ const Home = () => {
       <Helmet>
         <title>Anoop Saini | Full Stack Developer & Designer</title>
         <meta name="description" content="Portfolio of Anoop Saini, a Full Stack Developer & Designer creating modern, interactive web experiences." />
-        <meta name="keywords" content="Anoop Saini, Portfolio, Web Developer, Full Stack Developer, Frontend Developer, React Developer, Web Design" />
+        <meta name="keywords" content="Anoop Saini, Nit jalandhar, Portfolio, Web Developer, Full Stack Developer, Frontend Developer, React Developer, Web Design" />
         <link rel="canonical" href="https://anoopsaini.netlify.app/" />
 
         {/* Open Graph / Social Media Meta Tags */}
